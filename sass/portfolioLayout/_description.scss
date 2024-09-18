@@ -1,0 +1,119 @@
+.description::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 141.2%;
+  overflow: hidden;
+  z-index: -1;
+  background: url("/img/Foundation_Album_Cover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  background-position: center center;
+  filter: brightness(20%);
+}
+
+.description::before {
+  /*
+  @media (max-width: 117.5em) {
+    height: 244.7%;
+  }
+
+  @media (max-width: 90em) {
+    height: 235.5%;
+  }
+  @media (max-width: 80.125em) {
+    height: 242.5%;
+  }
+  @media (max-width: 78em) {
+    height: 249.5%;
+  }
+  @media (max-width: 72em) {
+    height: 256.3%;
+  }
+  @media (max-width: 69.3125em) {
+    height: 263.2%;
+  }
+  @media (max-width: 64.75em) {
+    height: 270.3%;
+  }
+  @media (max-width: 61.25em) {
+    height: 277.3%;
+  }
+  @media (max-width: 53.9375em) {
+    height: 284.3%;
+  }
+  @media (max-width: 52.1875em) {
+    height: 291%;
+  }
+  @media (max-width: 51.75em) {
+    height: 297.5%;
+  }
+  @media (max-width: 50.875em) {
+    height: 304.5%;
+  }
+  @media (max-width: 49.5625em) {
+    height: 310.5%;
+  }
+  @media (max-width: 48.75em) {
+    height: 200%;
+  }
+  @media (max-width: 48.75em) {
+    height: 223.5%;
+  }
+  */
+}
+
+.description {
+  margin-top: 3.2rem;
+
+  .description__link {
+    color: #e4e4e4;
+    border-bottom: 1.7px solid rgba(255, 43, 6, 1);
+    transition: 300ms all ease-in-out;
+
+    &:link {
+    }
+    &:visited {
+      color: #e4e4e4;
+    }
+    &:hover {
+      color: #ff5757;
+      border-bottom: 1.7px solid rgba(255, 43, 6, 1);
+    }
+    &:active {
+      color: #fff;
+    }
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3rem;
+    @media (max-width: 48.75em) {
+      font-size: 2rem;
+    }
+  }
+
+  &__box h1 {
+    margin-bottom: 2.4rem;
+  }
+
+  &__box p {
+    text-align: center;
+
+    padding-left: 14rem;
+    padding-right: 14rem;
+    padding-top: 3.6rem;
+
+    @media (max-width: 48.75em) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+}

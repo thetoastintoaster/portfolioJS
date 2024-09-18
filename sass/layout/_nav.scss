@@ -1,0 +1,125 @@
+/*
+@import "transition-style";
+https://github.com/argyleink/transition.css#basics
+<a class="nav__link" href="#" transition-style="in:square:center">Tools I use</a>
+@keyframes square-in-center {
+    from {
+      clip-path: inset(100% 100% 100% 100%);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  [transition-style="in:square:center"] {
+    animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) square-in-center both;
+  }
+  */
+
+/*
+    @use "../utility/_functions.scss" as util;
+
+
+    @include util.breakpoint(tablets) {
+    background-color: pink;
+  }
+  */
+@use "../utility/_breakpoints.scss" as util;
+
+.navbar {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  // max-width: 100%;
+  // margin: 0 auto;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #e4e4e4;
+  padding: 2.4rem 0rem;
+  border-bottom: 1.7px solid rgba(255, 43, 6, 0.3);
+  font-size: 3.4rem;
+  column-gap: 2.4rem;
+
+  font-weight: 400;
+  font-style: normal;
+  //lvha
+  .tools {
+    // padding-left: 39rem;
+  }
+  .nav__link {
+    color: #e4e4e4;
+    border-bottom: 1.7px solid rgba(255, 43, 6, 0);
+    transition: 300ms all ease-in-out;
+
+    &:link {
+    }
+    &:visited {
+      color: #e4e4e4;
+    }
+    &:hover {
+      color: #ff5757;
+      border-bottom: 1.7px solid rgba(255, 43, 6, 1);
+    }
+    &:active {
+      color: #fff;
+    }
+    /* MEDIA QUERIES */
+    @media (max-width: 80em) {
+      .tools {
+      }
+      // padding-left: 1.4rem;
+      // padding: 1.4rem;
+    }
+
+    @media (max-width: 77em) {
+      // padding-left: 2.4rem;
+      // padding-right: 2.4rem;
+    }
+  }
+
+  @media (max-width: 87em) {
+    // font-size: 3rem;
+  }
+
+  @media (max-width: 82em) {
+    // .tools {
+    //   width: px;
+    // }
+
+    // .currentProject {
+    //   width: 300px;
+    // }
+
+    // .about {
+    //   width: 250px;
+    // }
+    // column-gap: 2rem;
+    // font-size: 2.4rem;
+  }
+
+  @media (max-width: 73em) {
+    // font-size: 2rem;
+    // gap: 2.4rem;
+  }
+
+  @media (max-width: 50em) {
+    font-size: 3rem;
+    // gap: 2.4rem;
+  }
+
+  @media (max-width: 43.75em) {
+    position: unset;
+    flex-direction: column;
+    row-gap: 0.8rem;
+    // font-size: 2rem;
+    // gap: 2.4rem;
+  }
+}

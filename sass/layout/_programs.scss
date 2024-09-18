@@ -1,0 +1,237 @@
+.programs {
+  margin-top: 42rem;
+
+  /* Code for music and software lists */
+
+  &__mainBox {
+    /* /// */
+  }
+
+  &__gridContainer {
+    @media (max-width: 79.7em) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__gridContainer,
+  &__gridContainerTwo {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    gap: 0rem;
+
+    @media (max-width: 79.7em) {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      left: 0rem;
+      top: 0rem;
+    }
+  }
+
+  &__gridContainerTwo {
+    margin-top: 55rem;
+
+    @media (max-width: 79.7em) {
+      flex-direction: column;
+    }
+  }
+  &__music {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10rem;
+
+    position: relative;
+    left: 2rem;
+    top: 15rem;
+
+    @media (max-width: 43.75em) {
+      flex-direction: column;
+    }
+  }
+
+  &__boxThree {
+    @media (max-width: 43.75em) {
+      padding-bottom: 4.8rem;
+    }
+  }
+  &__software {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 3rem;
+
+    @media (max-width: 43.75em) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &__software {
+  }
+
+  &__imgContainer {
+    width: 14rem;
+    height: 14rem;
+  }
+  &__imgContainerSoftware {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+
+    left: 2rem;
+    top: 7rem;
+
+    @media (max-width: 43.75em) {
+      left: 0rem;
+      top: 0rem;
+    }
+  }
+
+  /*
+  &__imgContainerSoftware:hover {
+    box-shadow: 0px 8px 14px 1px rgba(255, 255, 255, 0.5);
+    background-color: rgba(199, 199, 199, 0.5);
+  }
+*/
+
+  &__img {
+    border-radius: 20px;
+
+    max-width: 110%;
+    max-height: 80%;
+    object-fit: cover;
+    transition: 245ms all;
+  }
+
+  &__img:hover {
+    box-shadow: 0px 8px 14px 1px rgba(255, 255, 255, 0.5);
+    background-color: rgba(199, 199, 199, 0.25);
+  }
+
+  &__boxTwo {
+    padding-top: 9rem;
+
+    @media (max-width: 79.7em) {
+      text-align: center;
+    }
+  }
+}
+
+/* Code for header text for the respective software list */
+
+.bigheaderText {
+  font-size: 25rem;
+  font-weight: 500;
+  letter-spacing: 1.4rem;
+  position: absolute;
+  z-index: -1;
+  left: 7rem;
+  top: 240rem;
+  text-shadow: rgba(255, 0, 0, 0.15) 13px 10px 10px;
+  transform: scale(1, 1);
+
+  color: #343a40;
+  // color: #e4e4e4;
+
+  // color: #f1f1f1;
+
+  @media (max-width: 79.7em) {
+    left: 0rem;
+    top: 280rem;
+
+    color: rgba(52, 58, 64, 0.3);
+    text-shadow: rgba(255, 0, 0, 0.1) 13px 10px 10px;
+  }
+
+  @media (max-width: 64.875em) {
+    font-size: 18rem;
+  }
+
+  @media (max-width: 50em) {
+    left: 0rem;
+    top: 330rem;
+    font-size: 16rem;
+  }
+
+  @media (max-width: 43.75em) {
+    left: 1rem;
+    top: 343rem;
+    font-size: 7.4rem;
+  }
+}
+
+.bigheaderTextTwo {
+  font-size: 20rem;
+  font-weight: 500;
+  letter-spacing: 1.4rem;
+  position: absolute;
+  z-index: -1;
+  left: 35rem;
+  top: 315rem;
+  text-shadow: rgba(255, 0, 0, 0.15) 13px 10px 10px;
+  transform: scale(1, 1);
+
+  color: #343a40;
+  // color: #e4e4e4;
+
+  @media (max-width: 93.5em) {
+    font-size: 17rem;
+  }
+
+  @media (max-width: 84.5em) {
+    font-size: 13rem;
+  }
+
+  @media (max-width: 79.7em) {
+    left: 26rem;
+    top: 370rem;
+    font-size: 12.4rem;
+
+    color: rgba(52, 58, 64, 0.3);
+    text-shadow: rgba(255, 0, 0, 0.1) 13px 10px 10px;
+  }
+
+  @media (max-width: 50em) {
+    left: 0rem;
+    top: 405rem;
+    font-size: 16rem;
+  }
+
+  @media (max-width: 43.75em) {
+    left: 0.5rem;
+    top: 450rem;
+    font-size: 9.8rem;
+  }
+}
+
+.musicTextHeader {
+  text-align: right;
+  font-size: 6.2rem;
+
+  @media (max-width: 79.7em) {
+    text-align: center;
+  }
+
+  @media (max-width: 43.75em) {
+    font-size: 3.6rem;
+  }
+}
+
+.softwareTextHeader {
+  // text-align: left;
+  font-size: 6.2rem;
+
+  @media (max-width: 43.75em) {
+    font-size: 3.6rem;
+  }
+}

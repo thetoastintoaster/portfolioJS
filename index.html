@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer type="module" src="js/controller.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <title>TheToastinToaster</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a id="toolsLink" class="nav__link tools" href="myPortfolio.html"
+        >My Portfolio</a
+      >
+      <!-- <a class="nav__link currentProject" href="#">305 Sample Pack</a> -->
+      <a class="nav__link about" href="aboutMe.html">About Me</a>
+    </nav>
+    <main>
+      <section class="hero container">
+        <div class="hero__content">
+          <div class="hero__iconContainer">
+            <img class="hero__icon" src="img/toastIcon.jpg" />
+          </div>
+          <div class="hero__boxOne">
+            <h3 class="hero__title">TheToastinToaster</h3>
+            <h4 class="hero__subTitle">
+              Full-Stack Web Developer & Music Producer
+            </h4>
+            <div class="button__container">
+              <a class="button__myPortfolio btn" href="myPortfolio.html">
+                My Portfolio
+              </a>
+              <a
+                class="button__myMusic btn"
+                href="https://open.spotify.com/artist/2Rnlv62msTSataG2i0lQzz"
+                >My Music</a
+              >
+            </div>
+          </div>
+          <div class="hero__boxTwo">
+            <h3 class="heroImgHeader">My Latest Single</h3>
+            <a
+              id="heroImgID"
+              class="heroImgContainer"
+              href="https://www.youtube.com/watch?v=wmOY9gGyB90"
+            >
+              <div class="">
+                <img class="heroImg" src="img/SingleCover.jpg" />
+              </div>
+            </a>
+            <a
+              class="latestReleaseLink"
+              href="https://www.youtube.com/watch?v=wmOY9gGyB90"
+              >Click To Listen</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="platforms container">
+        <div class="platforms__headerBox">
+          <p class="platforms__headerText">All of my links</p>
+          <div class="platforms__box">
+            <a
+              class="platforms__link platformBtn github"
+              href="https://github.com/thetoastintoaster"
+              target="_blank"
+            >
+              Github
+            </a>
+            <a
+              class="platforms__link platformBtn patreon"
+              href="https://patreon.com/thetoastintoaster"
+              target="_blank"
+            >
+              Patreon
+            </a>
+            <a
+              class="platforms__link platformBtn youtube"
+              href="https://www.youtube.com/@TheToastinToaster"
+              target="_blank"
+            >
+              YouTube
+            </a>
+            <a
+              class="platforms__link platformBtn spotify"
+              href="https://open.spotify.com/artist/2Rnlv62msTSataG2i0lQzz"
+              target="_blank"
+            >
+              Spotify
+            </a>
+          </div>
+          <div class="platforms__boxTwo">
+            <a
+              class="platforms__link platformBtn instagram"
+              href="https://www.instagram.com/thetoastintoasterofficial/"
+              target="_blank"
+            >
+              Instagram
+            </a>
+            <a
+              class="platforms__link platformBtn soundcloud"
+              href="https://soundcloud.com/laserstriike-607703744"
+              target="_blank"
+            >
+              SoundCloud
+            </a>
+            <a
+              class="platforms__link platformBtn twitter"
+              href="https://twitter.com/thtoastintoastr"
+              target="_blank"
+            >
+              Twitter
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="videos container">
+        <div class="videos__flexContainer">
+          <h1>My Latest Videos</h1>
+          <div class="videos__boxContainer">
+            <div id="loader__box" class="">
+              <div class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <p id="loader__text">Loading Videos...</p>
+            </div>
+            <div id="videos__box"></div>
+
+            <!-- <a target="_blank" href="" class="youtubeVideo">
+            <div class="youtube__box">
+              <img src="" class="youtubeVideoImage" />
+            </div>
+            <div>
+              <h3 id="videos_title"></h3>
+            </div> 
+          </a>-->
+            <!-- <div class="videos__box">
+            <p id="videos_title">[Insert title of video here via API]</p>
+            <p></p>
+          </div> -->
+          </div>
+          <div class="videos__btnContainer">
+            <div class="videos__btnSelectionContainer">
+              <button id="videos__nextVideoBtn" class="hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="2 1 20 20"
+                  strokeWidth="{1.5}"
+                  stroke="#e4e4e4"
+                  height="3rem"
+                  width="3rem"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 19.5 8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <button id="videos__previousVideoBtn" class="hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="2 1 20 20"
+                  strokeWidth="{1.5}"
+                  stroke="#e4e4e4"
+                  height="3rem"
+                  width="3rem"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+            <button id="videos__refreshVideoListBtn" class="hidden">
+              <p>refresh</p>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="programsSection" class="programs container">
+        <div class="programs__gridContainer">
+          <div class="bigheaderText">
+            <p>MUSIC</p>
+          </div>
+          <div class="programs__music">
+            <a
+              target="_blank"
+              href="https://www.presonus.com/en-US/studio-one.html"
+              class="programs__imgContainer"
+            >
+              <img class="programs__img" src="img/studioonesixlogo.png" />
+            </a>
+            <a
+              target="_blank"
+              href="https://vital.audio/"
+              class="programs__imgContainer"
+            >
+              <img class="programs__img" src="img/vitallogo.png" />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.image-line.com/"
+              class="programs__imgContainer"
+            >
+              <img class="programs__img" src="img/flStudioLogo.png" />
+            </a>
+          </div>
+
+          <div class="programs__boxTwo">
+            <p class="musicTextHeader">Software I Use For Music Production</p>
+          </div>
+        </div>
+        <div class="programs__gridContainerTwo">
+          <div class="bigheaderTextTwo">
+            <p>WEB DEV</p>
+          </div>
+          <div class="programs__boxThree">
+            <p class="softwareTextHeader">Software I Use For Web Development</p>
+          </div>
+          <div class="programs__software">
+            <a
+              target="_blank"
+              href="https://code.visualstudio.com/"
+              class="programs__imgContainerSoftware"
+            >
+              <img class="programs__img" src="img/vsCodeIcon.png" />
+            </a>
+            <a
+              target="_blank"
+              href="https://visualstudio.microsoft.com/"
+              class="programs__imgContainerSoftware"
+            >
+              <img class="programs__img" src="img/visualStudioIcon.png" />
+            </a>
+            <a
+              target="_blank"
+              href="https://ecma-international.org/publications-and-standards/standards/ecma-262/"
+              class="programs__imgContainerSoftware"
+            >
+              <img class="programs__img" src="img/ecmascriptLogo.png" />
+            </a>
+            <a
+              target="_blank"
+              href="https://heroicons.com/outline"
+              class="programs__imgContainerSoftware"
+            >
+              <img class="programs__img" src="img/heroiconsIcon.png" />
+            </a>
+            <a
+              target="_blank"
+              href="https://developer.mozilla.org/en-US/"
+              class="programs__imgContainerSoftware"
+            >
+              <img class="programs__img" src="img/mdnWebDocsLogo.png" />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.netlify.com/"
+              class="programs__imgContainerSoftware"
+            >
+              <img class="programs__img" src="img/netlifyIcon.png" />
+            </a>
+            <a
+              target="_blank"
+              href="https://nodejs.org/en"
+              class="programs__imgContainerSoftware"
+            >
+              <img class="programs__img" src="img/nodejs.png" />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.w3.org/"
+              class="programs__imgContainerSoftware"
+            >
+              <img
+                class="programs__img"
+                src="img/worldWideWebConsortumIcon.png"
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://coolors.co/"
+              class="programs__imgContainerSoftware"
+            >
+              <img class="programs__img" src="img/coolorsLogo.png" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer">
+        <div class="footer__box">
+          <div class="footer__content">
+            <h3>Contact Me</h3>
+            <ul class="footer__list">
+              <li>
+                <a
+                  href="#"
+                  class="footer__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >786-763-0592</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >thetoastintoaster@gmail.com</a
+                >
+              </li>
+            </ul>
+            <div>
+              <div class="footer__logo">
+                <img
+                  class="footer_logoImg"
+                  src="img/TheToastinToasterNightVersion.png"
+                />
+              </div>
+              <p class="footer__copyright">
+                Copyright &copy; TheToastinToaster. All rights reserved.
+              </p>
+            </div>
+          </div>
+          <!-- <div class="footer__content">
+            <h3>Account</h3>
+            <ul class="footer__list">
+              <li>
+                <a
+                  href="#"
+                  class="footer__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Create Account</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Sign In</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >iOS app</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Android app</a
+                >
+              </li>
+            </ul>
+          </div> -->
+          <div class="footer__content">
+            <h3>My Links</h3>
+            <div class="footer__listContainer">
+              <ul class="footer__list">
+                <li>
+                  <a
+                    href="https://github.com/thetoastintoaster"
+                    class="footer__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Github
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://patreon.com/thetoastintoaster"
+                    class="footer__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Patreon
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@TheToastinToaster"
+                    class="footer__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    YouTube
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://open.spotify.com/artist/2Rnlv62msTSataG2i0lQzz"
+                    class="footer__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Spotify
+                  </a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li>
+                  <a
+                    href="https://www.instagram.com/thetoastintoasterofficial/"
+                    class="footer__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://soundcloud.com/laserstriike-607703744"
+                    class="footer__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    SoundCloud
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/thtoastintoastr"
+                    class="footer__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Twitter
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="footer__logoContainer">
+            <div class="footer__logo">
+              <img
+                class="footer_logoImg"
+                src="img/TheToastinToasterNightVersion.png"
+              />
+            </div>
+            <p class="footer__copyright">
+              Copyright &copy; TheToastinToaster. All rights reserved.
+            </p>
+          </div> -->
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
